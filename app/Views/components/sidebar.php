@@ -15,12 +15,14 @@
                 <span>Keranjang</span>
             </a>
         </li><!-- End Keranjang Nav -->
+
         <li class="nav-item">
-            <a class="nav-link <?php echo (uri_string() == 'transaksi') ? "" : "collapsed" ?>" href="<?= base_url('transaksi') ?>">
-                <i class="bi bi-cart-check"></i>
+            <a class="nav-link <?= (uri_string() == 'transaksi') ? "" : "collapsed" ?>" href="<?= base_url('transaksi') ?>">
+                <i class="bi bi-list-check"></i>
                 <span>Transaksi</span>
             </a>
-        </li><!-- End transaksi Nav -->
+        </li><!-- End Transaksi Nav -->
+
         <?php if (session()->get('role') == 'admin') : ?>
             <li class="nav-item">
                 <a class="nav-link <?php echo (uri_string() == 'produk') ? "" : "collapsed" ?>" href="<?= base_url('produk') ?>">
@@ -28,7 +30,15 @@
                     <span>Produk</span>
                 </a>
             </li><!-- End Produk Nav -->
-        <?php endif; ?>
+        <?php endif ?>
+
+        <li class="nav-item">
+            <a class="nav-link <?php echo (uri_string() == 'profile') ? "" : "collapsed" ?>" href="profile">
+                <i class="bi bi-person"></i>
+                <span>Profile</span>
+            </a>
+        </li><!-- End Profile Nav -->
+
         <li class="nav-item">
             <a class="nav-link <?php echo (uri_string() == 'contact') ? "" : "collapsed" ?>" href="<?= base_url('contact') ?>">
                 <i class="bi bi-envelope"></i>
